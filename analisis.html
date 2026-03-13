@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis • WealthTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <h1>Wealth<span>Track</span></h1>
+            </div>
+            <p class="subtitle">Analisis keuanganmu secara detail</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-menu">
+            <a href="tabungan.html" class="nav-link">
+                <i class="fas fa-wallet"></i> Tabungan
+            </a>
+            <a href="target.html" class="nav-link">
+                <i class="fas fa-bullseye"></i> Target
+            </a>
+            <a href="analisis.html" class="nav-link active">
+                <i class="fas fa-chart-line"></i> Analisis
+            </a>
+        </div>
+
+        <!-- Analisis Grid -->
+        <div class="analisis-grid">
+            <!-- Statistik -->
+            <div class="stats-card">
+                <h3><i class="fas fa-chart-pie"></i> Statistik</h3>
+                <div class="stats-list">
+                    <div class="stat-item">
+                        <span>Total Pemasukan</span>
+                        <span class="stat-value" id="statTotal">Rp 0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Rata-rata per Bulan</span>
+                        <span class="stat-value" id="statRataBulan">Rp 0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Transaksi Tertinggi</span>
+                        <span class="stat-value" id="statTertinggi">Rp 0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Total Transaksi</span>
+                        <span class="stat-value" id="statTotalTransaksi">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Target -->
+            <div class="progress-card">
+                <h3><i class="fas fa-tasks"></i> Progress Target</h3>
+                <div class="stats-list" id="targetProgressList">
+                    <!-- Akan diisi JavaScript -->
+                </div>
+            </div>
+
+            <!-- Chart Bulanan -->
+            <div class="chart-card">
+                <h3><i class="fas fa-chart-line"></i> Pemasukan 6 Bulan</h3>
+                <div class="chart-container" id="chartContainer">
+                    <!-- Akan diisi JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

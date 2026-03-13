@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabungan • WealthTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <h1>Wealth<span>Track</span></h1>
+            </div>
+            <p class="subtitle">Kelola tabunganmu dengan elegan</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-menu">
+            <a href="tabungan.html" class="nav-link active">
+                <i class="fas fa-wallet"></i> Tabungan
+            </a>
+            <a href="target.html" class="nav-link">
+                <i class="fas fa-bullseye"></i> Target
+            </a>
+            <a href="analisis.html" class="nav-link">
+                <i class="fas fa-chart-line"></i> Analisis
+            </a>
+        </div>
+
+        <!-- Ringkasan -->
+        <div class="summary-grid">
+            <div class="summary-card gold">
+                <span class="summary-label">Total Tabungan</span>
+                <span class="summary-value" id="totalTabungan">Rp 0</span>
+                <i class="fas fa-coins"></i>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Jumlah Transaksi</span>
+                <span class="summary-value" id="jumlahTransaksi">0</span>
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Rata-rata</span>
+                <span class="summary-value" id="rataRata">Rp 0</span>
+                <i class="fas fa-chart-bar"></i>
+            </div>
+        </div>
+
+        <!-- Form Tambah Tabungan -->
+        <div class="form-card">
+            <h3><i class="fas fa-plus-circle" style="color: var(--gold);"></i> Tambah Tabungan</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Jumlah (Rp)</label>
+                    <input type="number" id="jumlahTabungan" placeholder="50.000">
+                </div>
+                <div class="form-group">
+                    <label>Keterangan</label>
+                    <input type="text" id="keteranganTabungan" placeholder="Gaji, THR, Bonus">
+                </div>
+                <div class="form-group">
+                    <label>Tanggal</label>
+                    <input type="date" id="tanggalTabungan">
+                </div>
+            </div>
+            <button class="btn-gold" onclick="tambahTabungan()">
+                <i class="fas fa-save"></i> Simpan Tabungan
+            </button>
+        </div>
+
+        <!-- Riwayat Tabungan -->
+        <div class="history-card">
+            <h3><i class="fas fa-history" style="color: var(--gold);"></i> Riwayat Tabungan</h3>
+            
+            <div class="filter-bar">
+                <input type="text" id="searchTabungan" placeholder="Cari keterangan...">
+                <select id="filterBulanTabungan">
+                    <option value="all">Semua Bulan</option>
+                    <option value="01">Januari</option>
+                    <option value="02">Februari</option>
+                    <option value="03">Maret</option>
+                    <option value="04">April</option>
+                    <option value="05">Mei</option>
+                    <option value="06">Juni</option>
+                    <option value="07">Juli</option>
+                    <option value="08">Agustus</option>
+                    <option value="09">September</option>
+                    <option value="10">Oktober</option>
+                    <option value="11">November</option>
+                    <option value="12">Desember</option>
+                </select>
+                <button class="btn-filter" onclick="filterTabungan()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div id="riwayatTabungan" class="transaction-list">
+                <!-- Akan diisi JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target • WealthTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <h1>Wealth<span>Track</span></h1>
+            </div>
+            <p class="subtitle">Wujudkan target finansialmu</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-menu">
+            <a href="tabungan.html" class="nav-link">
+                <i class="fas fa-wallet"></i> Tabungan
+            </a>
+            <a href="target.html" class="nav-link active">
+                <i class="fas fa-bullseye"></i> Target
+            </a>
+            <a href="analisis.html" class="nav-link">
+                <i class="fas fa-chart-line"></i> Analisis
+            </a>
+        </div>
+
+        <!-- Daftar Target -->
+        <div class="targets-grid" id="targetsContainer">
+            <!-- Akan diisi JavaScript -->
+        </div>
+
+        <!-- Form Tambah Target -->
+        <div class="form-card">
+            <h3><i class="fas fa-bullseye" style="color: var(--gold);"></i> Buat Target Baru</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nama Target</label>
+                    <input type="text" id="namaTarget" placeholder="Beli Laptop">
+                </div>
+                <div class="form-group">
+                    <label>Target (Rp)</label>
+                    <input type="number" id="targetNominal" placeholder="10.000.000">
+                </div>
+                <div class="form-group">
+                    <label>Link Foto (opsional)</label>
+                    <input type="url" id="fotoTarget" placeholder="https://example.com/image.jpg">
+                </div>
+            </div>
+            <button class="btn-gold" onclick="tambahTarget()">
+                <i class="fas fa-plus"></i> Buat Target
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
